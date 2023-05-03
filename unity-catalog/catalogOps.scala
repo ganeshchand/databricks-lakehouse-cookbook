@@ -4,4 +4,12 @@
 
 // COMMAND ----------
 
+spark.catalog.listCatalogs.show()
+
+// COMMAND ----------
+
+spark.catalog.listDatabases().show(false)
+
+// COMMAND ----------
+
 

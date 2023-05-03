@@ -40,3 +40,7 @@ val numberOfFiles = 4
 val format = "delta"
 val outputPath = rootPath.stripSuffix("/") + s"/data/iot/iot_devices/format=$format/"
 deviceJsonData.repartition(numberOfFiles.toInt).orderBy("timestamp").write.format(format).mode("overwrite").save(outputPath)
+
+// COMMAND ----------
+
+

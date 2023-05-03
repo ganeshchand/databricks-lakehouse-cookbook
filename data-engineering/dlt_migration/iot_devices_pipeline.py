@@ -32,5 +32,4 @@ def iot_devices_aggregation_cca2():
        .groupBy("cca2")
       .agg(count("device_ids").alias("device_count"),
            avg("humidity").alias("avg_humidity"))
-  )
-  
+  )  

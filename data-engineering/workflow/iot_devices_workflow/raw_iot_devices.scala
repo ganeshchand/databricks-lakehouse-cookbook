@@ -17,7 +17,6 @@ val rawIotDevices = spark.readStream
             .load(iot_data_path)
             .select("*", "_metadata")
 
-
 // COMMAND ----------
 
 if(!io.delta.tables.DeltaTable.isDeltaTable(s"$rootOutputPath/raw/")) spark.sql("SET spark.databricks.delta.formatCheck.enabled=false")
